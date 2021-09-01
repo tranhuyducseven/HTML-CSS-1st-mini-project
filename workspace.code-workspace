@@ -1,0 +1,18 @@
+{
+	"folders": [
+		{
+			"name": "zingMP3",
+			"path": "../../../coderx/zingMP3"
+		},
+		{
+			"name": "Me Web",
+			"path": "."
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "Me Web",
+		"files.associations": {
+			"iostream": "cpp"
+		}
+	}
+}

@@ -1,0 +1,19 @@
+The website include:
+1.  Header
+2. Navigation
+3. BreadCrumb
+4. SideBar
+5. Slider 
+6. Banner
+7.  Footer
+
+1.Analyze:
+    1.1  Header
+    1.2 Slider
+    1.3 Content
+        About
+        Contact
+        Image        
+    1.4 Footer
+2. Construct
+3. Review
