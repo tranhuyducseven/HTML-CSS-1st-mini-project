@@ -369,11 +369,13 @@ html {
   left: 0;
   right: 0;
   background-color: rgba(0, 0, 0, 0.4);
-  display: flex;
+  display: none;
   justify-content: center;
   align-items: center;
 }
-
+.open{
+  display: flex;
+}
 .modal .modal-container {
   background-color: #fff;
   width:900px;
@@ -381,6 +383,7 @@ html {
  max-width: calc(100%-32px);
   min-height: 200px;  
   position: relative;
+  animation: modalAppear ease 0.4s;
 }
 .modal .modal-container .modal-close {
   position: absolute;
@@ -447,4 +450,11 @@ html {
 .modal-footer .modal-help a{
   color:rgb(0, 174, 255);
 }
-
+@keyframes modalAppear{
+  from{
+   transform: translateY(-100px);
+  }
+  to{
+    transform: translateY(0);
+  }
+}

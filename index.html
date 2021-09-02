@@ -138,7 +138,7 @@
                   <div class="framework-desc">
                     I have a long time with learning openCV.
                   </div>
-                  <a href="#" class="btn">Infor</a>
+                  <button href="#" class="btn js-button">Infor</button>
                 </div>
               </div>
               <div class="framework-item">
@@ -155,7 +155,7 @@
                     After graduated, I had the project about AI and I began to
                     learn AI from this.
                   </div>
-                  <a href="#" class="btn">Infor</a>
+                  <button href="#" class="btn js-button">Infor</button>
                 </div>
               </div>
               <div class="framework-item">
@@ -172,7 +172,7 @@
                     In 2030, I have worked at Viettel, almost projects
                     concerning to Ruby
                   </div>
-                  <a href="#" class="btn">Infor</a>
+                  <button href="#" class="btn js-button">Infor</button>
                 </div>
               </div>
               <div class="clear"></div>
@@ -265,9 +265,9 @@
       </div>
     </div>
 
-    <div class="modal">
-      <div class="modal-container">
-        <div class="modal-close">
+    <div class="modal js-modal">
+      <div class="modal-container js-modal-container ">
+        <div class="modal-close js-modal-close">
           <i class="ti-close"></i>
         </div>
         <header class="modal-header">
@@ -279,7 +279,8 @@
             <i class="ti-comment"></i>
             Your comments
           </label>
-          <input id="comments"
+          <input
+            id="comments"
             type="text"
             class="modal-input"
             placeholder="Write somethings"
@@ -288,7 +289,8 @@
             <i class="ti-user"></i>
             Send to
           </label>
-          <input id="send-to"
+          <input
+            id="send-to"
             type="email"
             class="modal-input"
             placeholder="Enter email..."
@@ -326,6 +328,26 @@
           }
         };
       }
+    </script>
+    <script>
+      const inforBtns = document.querySelectorAll(".js-button");
+      const modal = document.querySelector(".js-modal");
+      const modalContainer = document.querySelector(".js-modal-container");
+      const closeModalBtn = document.querySelector(".js-modal-close");
+      for (const inforBtn of inforBtns) {
+        inforBtn.addEventListener("click", function () {
+          modal.classList.add("open");
+        });
+      }
+      closeModalBtn.addEventListener("click", function () {
+        modal.classList.remove("open");
+      });
+      modal.addEventListener("click", function () {
+        modal.classList.remove("open");
+      });
+      modalContainer.addEventListener('click',function(event){
+        event.stopPropagation();
+      })
     </script>
   </body>
 </html>
